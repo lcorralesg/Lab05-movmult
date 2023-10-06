@@ -4,9 +4,17 @@
              x:Class="Lab05.ButtonDemo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="label"
+                   Text="Click the button below"
+                   FontSize="Large"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"/>
+
+            <Button Text="Click to Rotate Text!"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Clicked="OnButtonClicked"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
