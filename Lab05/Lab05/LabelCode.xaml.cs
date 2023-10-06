@@ -15,6 +15,8 @@ namespace Lab05
 		public LabelCode ()
 		{
 			InitializeComponent ();
+			var underlineLabel = new Label { Text = "This is an underlined label.", TextDecorations = TextDecorations.Underline };
+			var strikeThroughLabel = new Label { Text = "This is a strikethrough label.", TextDecorations = TextDecorations.Strikethrough };
 		}
 	}
 }
