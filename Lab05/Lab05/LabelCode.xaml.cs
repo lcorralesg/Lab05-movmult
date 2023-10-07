@@ -15,8 +15,15 @@ namespace Lab05
 		public LabelCode ()
 		{
 			InitializeComponent ();
-			var underlineLabel = new Label { Text = "This is an underlined label.", TextDecorations = TextDecorations.Underline };
-			var strikeThroughLabel = new Label { Text = "This is a strikethrough label.", TextDecorations = TextDecorations.Strikethrough };
+			StackLayout stack = new StackLayout();
+			var underlineLabel = new Label { Text = "This is underlined label.", TextDecorations = TextDecorations.Underline };
+			var strikeThroughLabel = new Label { Text = "This is text with strikethrough.", TextDecorations = TextDecorations.Strikethrough };
+			var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
+
+			stack.Children.Add (underlineLabel);
+			stack.Children.Add (strikeThroughLabel);
+			stack.Children.Add (bothLabel);
+			Content = stack;
 		}
 	}
 }
